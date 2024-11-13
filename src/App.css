@@ -1,0 +1,129 @@
+.App {
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.instructions {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.search-input {
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.command-container {
+  flex-grow: 1;
+  overflow-x: visible;
+}
+.command-tree {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 5px;
+  overflow-x: visible;
+}
+.mobile-tree {
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 5px;
+}
+.mobile-list {
+  list-style-type: none;
+  padding: 0;
+}
+.mobile-list li {
+  margin-bottom: 10px;
+}
+.header, .footer {
+  text-align: center;
+  padding: 10px 0;
+}
+.header a, .footer a {
+  color: #FF1800;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+.header a:hover, .footer a:hover {
+  color: #FF6347;
+  text-decoration: underline;
+}
+.footer {
+  margin-top: 20px;
+  border-top: 1px solid #ffffff;
+}
+.footer p {
+  margin: 10px 0;
+}
+.clipboard {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.clipboard:hover {
+  opacity: 0.7;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+  color: #FFFF00; 
+}
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  white-space: normal;
+  z-index: 100;
+  font-size: 12px;
+  max-width: 400px;
+  min-width:  400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #555;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  .search-input {
+    width: 90%;
+  }
+  .command-tree, .mobile-tree {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .tooltip:hover::after {
+    left: auto;
+    right: 0;
+    top: 100%;
+    transform: none;
+    margin-top: 5px;
+  }
+}

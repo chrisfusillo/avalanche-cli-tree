@@ -1,5 +1,5 @@
 {
-  "version": "v1.8.5",
+  "version": "v1.8.6",
   "tree": {
     "description": "Avalanche-CLI is a command-line tool that gives developers access to everything Avalanche. This release specializes in helping developers build and test Blockchain networks. To get started, look at the documentation for the subcommands or jump right in with avalanche blockchain create myNewBlockchain. Usage: avalanche [command]",
     "flags": {
@@ -77,18 +77,6 @@
               "--balance": {
                 "type": "float",
                 "description": "set the AVAX balance of the validator that will be used for continuous fee on P-Chain"
-              },
-              "--blockchain-genesis-key": {
-                "type": "use",
-                "description": "genesis allocated key to pay fees for completing the validator's registration (blockchain gas token)"
-              },
-              "--blockchain-key": {
-                "type": "string",
-                "description": "CLI stored key to use to pay fees for completing the validator's registration (blockchain gas token)"
-              },
-              "--blockchain-private-key": {
-                "type": "string",
-                "description": "private key to use to pay fees for completing the validator's registration (blockchain gas token)"
               },
               "--bls-proof-of-possession": {
                 "type": "string",
@@ -210,10 +198,6 @@
               "--rpc": {
                 "type": "string",
                 "description": "connect to validator manager at the given rpc endpoint"
-              },
-              "--stake-amount": {
-                "type": "uint",
-                "description": "(PoS only) amount of tokens to stake"
               },
               "--staking-period": {
                 "type": "duration",
@@ -539,18 +523,6 @@
               "--balance": {
                 "type": "float",
                 "description": "set the AVAX balance of each bootstrap validator that will be used for continuous fee on P-Chain (default 0.1)"
-              },
-              "--blockchain-genesis-key": {
-                "type": "use",
-                "description": "genesis allocated key to fund validator manager initialization"
-              },
-              "--blockchain-key": {
-                "type": "string",
-                "description": "CLI stored key to use to fund validator manager initialization"
-              },
-              "--blockchain-private-key": {
-                "type": "string",
-                "description": "private key to use to fund validator manager initialization"
               },
               "--bootstrap-endpoints": {
                 "type": "strings",
@@ -927,18 +899,6 @@
               "--balance": {
                 "type": "float",
                 "description": "set the AVAX balance of each bootstrap validator that will be used for continuous fee on P-Chain (default 0.1)"
-              },
-              "--blockchain-genesis-key": {
-                "type": "use",
-                "description": "genesis allocated key to fund validator manager initialization"
-              },
-              "--blockchain-key": {
-                "type": "string",
-                "description": "CLI stored key to use to fund validator manager initialization"
-              },
-              "--blockchain-private-key": {
-                "type": "string",
-                "description": "private key to use to fund validator manager initialization"
               },
               "--bootstrap-endpoints": {
                 "type": "strings",
@@ -1660,18 +1620,6 @@
                 "type": "strings",
                 "description": "(for non-SOV blockchain only) control keys that will be used to authenticate the removeValidator tx"
               },
-              "--blockchain-genesis-key": {
-                "type": "use",
-                "description": "genesis allocated key to pay fees for completing the validator's removal (blockchain gas token)"
-              },
-              "--blockchain-key": {
-                "type": "string",
-                "description": "CLI stored key to use to pay fees for completing the validator's removal (blockchain gas token)"
-              },
-              "--blockchain-private-key": {
-                "type": "string",
-                "description": "private key to use to pay fees for completing the validator's removal (blockchain gas token)"
-              },
               "--cluster": {
                 "type": "string",
                 "description": "operate on the given cluster"
@@ -1870,7 +1818,7 @@
                 "flags": {
                   "--avalanchego-chain-config-dir": {
                     "type": "string",
-                    "description": "avalanchego's chain config file directory (default \"/Users/schlanka/.avalanchego/chains\")"
+                    "description": "avalanchego's chain config file directory (default \"/Users/appa/.avalanchego/chains\")"
                   },
                   "--config": {
                     "type": "create",
@@ -4298,7 +4246,7 @@
               },
               "--snapshot-name": {
                 "type": "string",
-                "description": "name of snapshot to use to start the network from (default \"default-1654102509\") Global Flags:"
+                "description": "name of snapshot to use to start the network from (default \"default\") Global Flags:"
               },
               "--config": {
                 "type": "string",
@@ -4356,7 +4304,7 @@
               },
               "--snapshot-name": {
                 "type": "string",
-                "description": "name of snapshot to use to save network state into (default \"default-1654102509\") Global Flags:"
+                "description": "name of snapshot to use to save network state into (default \"default\") Global Flags:"
               },
               "--config": {
                 "type": "string",
